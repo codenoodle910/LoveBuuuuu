@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html>
 <HTML>
  <HEAD>
   <TITLE> Heart </TITLE>
@@ -35,6 +35,7 @@ canvas {
   width: 100%;
   height: 100%;
 }
+/* CSS này sẽ tạo hiệu ứng cho thẻ div bao ngoài */
 #pinkboard {
 	position: relative;
 	margin: auto;
@@ -85,9 +86,10 @@ canvas {
  </HEAD>
  
  <BODY>
-   <div class="box">
-      <canvas id="pinkboard"></canvas>
+   <div class="box" id="pinkboard">
+      <canvas id="canvas"></canvas>
    </div>
+
   <script>
   /*
  * Settings
@@ -318,7 +320,8 @@ var ParticlePool = (function() {
     onResize();
     render();
   }, 10);
-})(document.getElementById('pinkboard'));
+// SỬA ĐỔI 2: Thay đổi id mục tiêu thành "canvas"
+})(document.getElementById('canvas'));
   </script>
  </BODY>
 </HTML>
