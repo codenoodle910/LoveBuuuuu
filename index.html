@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
  <HEAD>
   <TITLE> Heart </TITLE>
@@ -17,6 +17,7 @@
   display: flex;
 	justify-content: center;
 	align-items: center;
+
 }
 
 .box {
@@ -66,20 +67,6 @@ canvas {
 	transform-origin: 100% 100%;
 }
 
-/* CSS cho chữ */
-#text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    font-size: 24px;
-    font-family: 'Arial', sans-serif;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-}
-
 @keyframes animate {
 	0% {
 		transform: scale(1);
@@ -98,9 +85,8 @@ canvas {
  </HEAD>
  
  <BODY>
-   <div class="box" id="pinkboard">
-      <div id="text">Yêu Buuuuuu</div>
-      <canvas id="canvas"></canvas>
+   <div class="box">
+      <canvas id="pinkboard"></canvas>
    </div>
   <script>
   /*
@@ -332,8 +318,7 @@ var ParticlePool = (function() {
     onResize();
     render();
   }, 10);
-// Sửa lại dòng cuối này
-})(document.getElementById('canvas'));
+})(document.getElementById('pinkboard'));
   </script>
  </BODY>
 </HTML>
